@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас | SkillHive</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f9f9f9;
+            color: #555555;
+            font-family: 'Arial', sans-serif;
+        }
+
+        header {
+            background-color: #337ab7;
+            color: #ffffff;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+        }
+
+        form {
+            width: 40%;
+            margin: 0 auto;
+            text-align: left;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        input[type="text"] {
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #337ab7;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1 class="display-4">SkillHive</h1>
+            <div>
+                <a href="/account/courses" class="mr-3" style="color:white" >Мои Курсы</a>
+                <a href="/account" class="mr-3" style="color: white;">Личный Кабинет</a>
+            </div>
+        </div>
+    </header>
+
+
+    <h1>Личный кабинет</h1>
+    <p>Добро пожаловать, {{ user.first_name }}!</p>
+    <p>Ваш email: {{ user.email }}</p>
+    <p><a href="/login/">Выйти</a></p>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

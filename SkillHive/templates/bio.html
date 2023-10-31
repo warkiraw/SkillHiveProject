@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас | SkillHive</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f9f9f9;
+            color: #555555;
+            font-family: 'Arial', sans-serif;
+        }
+
+        header {
+            background-color: #337ab7;
+            color: #ffffff;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+        }
+
+        form {
+            width: 40%;
+            margin: 0 auto;
+            text-align: left;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        input[type="text"] {
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #337ab7;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1 class="display-4">SkillHive</h1>
+            <div>
+                <p class="mb-0">Телефон: 87781277775</p>
+                <p class="mb-0">Почта: skillhivecorp@gmail.com</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="container py-5 text-center">
+        <h2 class="mb-4">О нас</h2>
+        <p class="lead font-weight-bold">SkillHive - это ведущая онлайн-платформа, предоставляющая доступ к более чем тысяче образовательных курсов по различным темам. Наша миссия - обеспечить нашим клиентам лучшие образовательные возможности для роста и развития как профессионалов в своей области.</p>
+        <h2 class="mb-4 mt-5">Наши курсы</h2>
+        <p>Мы предлагаем широкий спектр курсов по информационным технологиям, маркетингу, финансам, управлению и многим другим. Наши курсы созданы с учетом современных тенденций и требований рынка, обеспечивая вам конкурентное преимущество в вашей области деятельности.</p>
+        <h2 class="mb-4 mt-5">Зачем вам курсы</h2>
+        <p>В современном мире, где технологии и требования рынка постоянно меняются, постоянное образование становится необходимостью. Курсы на SkillHive помогут вам укрепить ваши профессиональные навыки и улучшить вашу карьеру, давая вам уверенность и навыки, необходимые для успешного конкурирования в современной бизнес-среде.</p>
+        <h2 class="mb-4 mt-5">Преимущества для компании</h2>
+        <p>Инвестиции в образование сотрудников приносят высокий возврат в виде улучшенной производительности, лучшей адаптации к изменениям и укрепления позиций на рынке. SkillHive поможет вашей компании создать команду высококвалифицированных и мотивированных специалистов, готовых к вызовам современного бизнеса.</p>
+    </div>
+
+    <footer>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Телефон:</label>
+                <input type="text" id="phone" name="phone" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Связаться с нами</button>
+        </form>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
